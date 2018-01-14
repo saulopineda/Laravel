@@ -5,11 +5,11 @@
 
 @section('content')
     <form action="/notes" method="Post" role="form">
-        {{ csrf_field() }}
-        <legend>Crear nueva nota</legend>
+      {{ csrf_field() }}
+      <legend>Crear nueva nota</legend>
+      @include('Layouts._validation-errors')
+      @include('Notes._form')
 
-        @include('Notes._form')
-
-        <button type="submit" class="btn btn-primary">Crear</button>
+      <button type="submit" class="btn btn-primary">Crear</button>
     </form>
 @endsection
